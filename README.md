@@ -8,7 +8,9 @@ It's part of my ongoing journey to strengthen my Flutter skills.
 
 ## 🔮 Features
 
-- 🚧 **Coming soon** — Features will be documented as they are built  
+- 🔐 **Authentication Screen** — A beautiful login and signup interface with form validation.
+- 🎨 **Custom Theme** — Deep purple color scheme for a modern look and feel.
+- 🖼️ **Asset Management** — Integrated custom chat assets for a personalized UI.
 
 ---
 
@@ -16,7 +18,10 @@ It's part of my ongoing journey to strengthen my Flutter skills.
 
 This app is a work in progress — learnings will be documented as development continues:  
 
-- 🚧 *To be updated*  
+- 🏗️ **Flutter App Structure** — Refactored the default boilerplate into a cleaner `App` widget.
+- 📱 **UI Design** — Built a responsive authentication screen using `SingleChildScrollView`, `Card`, and `Form` widgets.
+- 🔄 **State Management** — Implemented basic local state to toggle between Login and Signup modes.
+- 🎨 **Theming** — Customized `ThemeData` with `ColorScheme.fromSeed` to maintain visual consistency.
 
 ---
 
