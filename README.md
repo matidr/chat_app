@@ -11,17 +11,24 @@ It's part of my ongoing journey to strengthen my Flutter skills.
 - 🔐 **Authentication Screen** — A beautiful login and signup interface with form validation.
 - 🎨 **Custom Theme** — Deep purple color scheme for a modern look and feel.
 - 🖼️ **Asset Management** — Integrated custom chat assets for a personalized UI.
+- 🔥 **Firebase Integration** — Firebase Core and Auth configured across Android, iOS, and macOS platforms.
+- 🔑 **Email/Password Authentication** — Users can sign up and log in using Firebase Authentication, with real-time error feedback via SnackBar.
+- 💬 **Chat Screen** — A dedicated screen shown after successful authentication.
+- 🔄 **Auth-Based Routing** — App uses `StreamBuilder` with `authStateChanges()` to automatically route users between the auth and chat screens.
 
 ---
 
 ## 📖 What I Learnt
 
-This app is a work in progress — learnings will be documented as development continues:  
+This app is a work in progress — learnings will be documented as development continues:
 
 - 🏗️ **Flutter App Structure** — Refactored the default boilerplate into a cleaner `App` widget.
 - 📱 **UI Design** — Built a responsive authentication screen using `SingleChildScrollView`, `Card`, and `Form` widgets.
 - 🔄 **State Management** — Implemented basic local state to toggle between Login and Signup modes.
 - 🎨 **Theming** — Customized `ThemeData` with `ColorScheme.fromSeed` to maintain visual consistency.
+- 🔥 **Firebase Setup** — Integrated `firebase_core` and `firebase_auth`, initialized Firebase in `main.dart` using platform-specific options.
+- 🔐 **Firebase Authentication** — Implemented email/password sign-in and account creation using `FirebaseAuth`, with `FirebaseAuthException` error handling.
+- 🔄 **Stream-Based Navigation** — Used `StreamBuilder` with `authStateChanges()` to reactively route users based on authentication state.
 
 ---
 
@@ -47,9 +54,9 @@ This app is a work in progress — learnings will be documented as development c
 
 ## 🔧 Tech Stack
 
-- 🪄 Flutter SDK  
-- 📂 Dart Language  
-- 🚧 *More to be added*  
+- 🪄 Flutter SDK
+- 📂 Dart Language
+- 🔥 Firebase Core & Firebase Auth
 
 ---
 
