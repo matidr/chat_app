@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'firebase_secrets.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -41,7 +42,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'FIREBASE_WEB_API_KEY',
+    apiKey: FirebaseSecrets.webApiKey,
     appId: '1:214944167158:web:452a3eaa74cc43c1b3e8d7',
     messagingSenderId: '214944167158',
     projectId: 'chatapp-e88ae',
@@ -52,7 +53,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'FIREBASE_ANDROID_API_KEY',
+    apiKey: FirebaseSecrets.androidApiKey,
     appId: '1:214944167158:android:2d5e31c015809cc1b3e8d7',
     messagingSenderId: '214944167158',
     projectId: 'chatapp-e88ae',
@@ -61,7 +62,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'FIREBASE_IOS_API_KEY',
+    apiKey: FirebaseSecrets.iosApiKey,
     appId: '1:214944167158:ios:f09ce0d02df39720b3e8d7',
     messagingSenderId: '214944167158',
     projectId: 'chatapp-e88ae',
@@ -71,7 +72,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'FIREBASE_IOS_API_KEY',
+    apiKey: FirebaseSecrets.iosApiKey,
     appId: '1:214944167158:ios:f09ce0d02df39720b3e8d7',
     messagingSenderId: '214944167158',
     projectId: 'chatapp-e88ae',
@@ -81,7 +82,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'FIREBASE_WEB_API_KEY',
+    apiKey: FirebaseSecrets.webApiKey,
     appId: '1:214944167158:web:0191e83301dc25ddb3e8d7',
     messagingSenderId: '214944167158',
     projectId: 'chatapp-e88ae',

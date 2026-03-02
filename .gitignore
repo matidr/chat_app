@@ -48,3 +48,6 @@ app.*.map.json
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 macos/Runner/GoogleService-Info.plist
+
+# Firebase secrets (API keys — never commit)
+lib/firebase_secrets.dart
