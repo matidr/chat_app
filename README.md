@@ -15,6 +15,9 @@ It's part of my ongoing journey to strengthen my Flutter skills.
 - 🔑 **Email/Password Authentication** — Users can sign up and log in using Firebase Authentication, with real-time error feedback via SnackBar.
 - 💬 **Chat Screen** — A dedicated screen shown after successful authentication.
 - 🔄 **Auth-Based Routing** — App uses `StreamBuilder` with `authStateChanges()` to automatically route users between the auth and chat screens.
+- ⏳ **Splash Screen** — A loading screen displayed while the Firebase auth state is being resolved on app start.
+- 🖼️ **Profile Photo Picker** — Users can capture a profile photo via the camera during signup using the `image_picker` package.
+- 🚪 **Sign Out** — Users can sign out from the chat screen via an icon button in the app bar.
 
 ---
 
@@ -29,6 +32,9 @@ This app is a work in progress — learnings will be documented as development c
 - 🔥 **Firebase Setup** — Integrated `firebase_core` and `firebase_auth`, initialized Firebase in `main.dart` using platform-specific options.
 - 🔐 **Firebase Authentication** — Implemented email/password sign-in and account creation using `FirebaseAuth`, with `FirebaseAuthException` error handling.
 - 🔄 **Stream-Based Navigation** — Used `StreamBuilder` with `authStateChanges()` to reactively route users based on authentication state.
+- ⏳ **Splash Screen** — Handled `ConnectionState.waiting` from the auth stream to show a loading screen during Firebase initialization.
+- 📸 **Image Picker** — Integrated `image_picker` to let users capture a profile photo from the camera during signup, using `ImagePicker().pickImage()` with quality and size constraints.
+- 🚪 **Sign Out** — Wired up `FirebaseAuth.instance.signOut()` to an icon button in the chat screen's `AppBar`.
 
 ---
 
@@ -57,6 +63,7 @@ This app is a work in progress — learnings will be documented as development c
 - 🪄 Flutter SDK
 - 📂 Dart Language
 - 🔥 Firebase Core & Firebase Auth
+- 📸 image_picker
 
 ---
 

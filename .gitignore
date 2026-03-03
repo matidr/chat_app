@@ -51,3 +51,4 @@ macos/Runner/GoogleService-Info.plist
 
 # Firebase secrets (API keys — never commit)
 lib/firebase_secrets.dart
+/firepit-log.txt
