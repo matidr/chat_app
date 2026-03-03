@@ -17,6 +17,8 @@ It's part of my ongoing journey to strengthen my Flutter skills.
 - 🔄 **Auth-Based Routing** — App uses `StreamBuilder` with `authStateChanges()` to automatically route users between the auth and chat screens.
 - ⏳ **Splash Screen** — A loading screen displayed while the Firebase auth state is being resolved on app start.
 - 🖼️ **Profile Photo Picker** — Users can capture a profile photo via the camera during signup using the `image_picker` package.
+- ☁️ **Firebase Storage** — Profile photos captured during signup are uploaded to Firebase Storage and the download URL is retrieved.
+- ⏺️ **Loading State** — Auth buttons are replaced with a `CircularProgressIndicator` while sign-in or sign-up is in progress.
 - 🚪 **Sign Out** — Users can sign out from the chat screen via an icon button in the app bar.
 
 ---
@@ -34,6 +36,9 @@ This app is a work in progress — learnings will be documented as development c
 - 🔄 **Stream-Based Navigation** — Used `StreamBuilder` with `authStateChanges()` to reactively route users based on authentication state.
 - ⏳ **Splash Screen** — Handled `ConnectionState.waiting` from the auth stream to show a loading screen during Firebase initialization.
 - 📸 **Image Picker** — Integrated `image_picker` to let users capture a profile photo from the camera during signup, using `ImagePicker().pickImage()` with quality and size constraints.
+- ☁️ **Firebase Storage** — Uploaded the selected profile image to Firebase Storage under `user_images/{uid}.jpg` and retrieved the download URL via `getDownloadURL()`.
+- ⏺️ **Loading State** — Used an `_isAuthenticating` flag with `setState` to conditionally show a `CircularProgressIndicator` and hide action buttons during auth.
+- 🔗 **Callback Pattern** — Passed an `onImagePick` callback from `AuthScreen` into `UserImagePicker` to bubble the selected `File` up to the parent widget.
 - 🚪 **Sign Out** — Wired up `FirebaseAuth.instance.signOut()` to an icon button in the chat screen's `AppBar`.
 
 ---
@@ -64,6 +69,7 @@ This app is a work in progress — learnings will be documented as development c
 - 📂 Dart Language
 - 🔥 Firebase Core & Firebase Auth
 - 📸 image_picker
+- ☁️ Firebase Storage
 
 ---
 
