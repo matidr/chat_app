@@ -20,6 +20,8 @@ It's part of my ongoing journey to strengthen my Flutter skills.
 - ☁️ **Firebase Storage** — Profile photos captured during signup are uploaded to Firebase Storage and the download URL is retrieved.
 - ⏺️ **Loading State** — Auth buttons are replaced with a `CircularProgressIndicator` while sign-in or sign-up is in progress.
 - 🚪 **Sign Out** — Users can sign out from the chat screen via an icon button in the app bar.
+- 👤 **Username on Signup** — Users enter a username during signup which is stored in Firestore alongside their email and profile image URL.
+- 💬 **Message Sending** — Users can type and send messages, stored in Firestore's `chat` collection with their username and profile image.
 
 ---
 
@@ -40,6 +42,8 @@ This app is a work in progress — learnings will be documented as development c
 - ⏺️ **Loading State** — Used an `_isAuthenticating` flag with `setState` to conditionally show a `CircularProgressIndicator` and hide action buttons during auth.
 - 🔗 **Callback Pattern** — Passed an `onImagePick` callback from `AuthScreen` into `UserImagePicker` to bubble the selected `File` up to the parent widget.
 - 🚪 **Sign Out** — Wired up `FirebaseAuth.instance.signOut()` to an icon button in the chat screen's `AppBar`.
+- 🗄️ **Cloud Firestore** — Integrated `cloud_firestore` to store user profiles in a `users` collection and chat messages in a `chat` collection, using `Timestamp.now()` for message ordering.
+- 🔗 **Firestore Reads in Widgets** — Fetched the current user's Firestore document inside an async method to attach username and image URL to each sent message.
 
 ---
 
@@ -70,6 +74,7 @@ This app is a work in progress — learnings will be documented as development c
 - 🔥 Firebase Core & Firebase Auth
 - 📸 image_picker
 - ☁️ Firebase Storage
+- 🗄️ Cloud Firestore
 
 ---
 
