@@ -22,6 +22,9 @@ It's part of my ongoing journey to strengthen my Flutter skills.
 - 🚪 **Sign Out** — Users can sign out from the chat screen via an icon button in the app bar.
 - 👤 **Username on Signup** — Users enter a username during signup which is stored in Firestore alongside their email and profile image URL.
 - 💬 **Message Sending** — Users can type and send messages, stored in Firestore's `chat` collection with their username and profile image.
+- 📨 **Real-Time Chat Display** — Messages are streamed live from Firestore and displayed in a `ListView` ordered by timestamp, with grouped bubbles per user.
+- 🎨 **Avatar Fallback** — When a user has no profile photo, a colored `CircleAvatar` with their initial is shown, with a consistent color derived from their username.
+- ⌨️ **Enter to Send** — Users can submit messages by pressing Enter in addition to tapping the send button.
 
 ---
 
@@ -44,6 +47,9 @@ This app is a work in progress — learnings will be documented as development c
 - 🚪 **Sign Out** — Wired up `FirebaseAuth.instance.signOut()` to an icon button in the chat screen's `AppBar`.
 - 🗄️ **Cloud Firestore** — Integrated `cloud_firestore` to store user profiles in a `users` collection and chat messages in a `chat` collection, using `Timestamp.now()` for message ordering.
 - 🔗 **Firestore Reads in Widgets** — Fetched the current user's Firestore document inside an async method to attach username and image URL to each sent message.
+- 📡 **Firestore StreamBuilder** — Used `StreamBuilder` with a Firestore snapshot stream to display messages in real time, grouped by sender with `MessageBubble.first` and `MessageBubble.next`.
+- 🎨 **Dynamic Avatar Fallback** — Derived a consistent color from the username's hash using `Colors.primaries` to show a colored initial avatar when no profile image is set.
+- ⌨️ **textInputAction** — Used `TextInputAction.send` with `onSubmitted` to allow sending messages via the Enter key.
 
 ---
 

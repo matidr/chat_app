@@ -60,6 +60,8 @@ class _NewMessageState extends State<NewMessage> {
                 decoration: const InputDecoration(
                   labelText: "Send a message...",
                 ),
+                textInputAction: TextInputAction.send,
+                onSubmitted: (_) => _submitMessage(),
               ),
             ),
             IconButton(onPressed: _submitMessage, icon: Icon(Icons.send)),
